@@ -24,6 +24,18 @@ More details on our NoW benchmark dataset, 3D face reconstruction challenge can 
 
 The code uses **Python 2.7** and it is tested on Tensorflow gpu version 1.12.0, with CUDA-9.0 and cuDNN-7.3.
 
+Note 1: for error regarding egg_info, run:
+```
+pip install imageio==2.6.1
+pip install -r requirements.txt
+```
+
+Note 2: for tensorflow-gpu==1.12.0, requires protobuf >= 3.6.1. If error regarding protobuf requiring python 3.6, run 
+```
+pip install protobuf==3.6.1
+pip install tensorflow-gpu==1.12.0
+```
+
 ### Setup RingNet Virtual Environment
 
 ```
