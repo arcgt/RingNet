@@ -54,7 +54,7 @@ mkdir model
 ```
 Install mesh processing libraries from [MPI-IS/mesh](https://github.com/MPI-IS/mesh). (This now only works with python 3, so donot install it)
 
-* Update: Please install the following [fork](https://github.com/TimoBolkart/mesh) for working with the mesh processing libraries with python 2.7 
+* Update: Please install the following [fork](https://github.com/TimoBolkart/mesh) for working with the mesh processing libraries with python 2.7. When running `make`, if using a conda environment, deactivate environment before running, then activate before running `make install`.
 
 ## Download models
 
