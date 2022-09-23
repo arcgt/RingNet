@@ -40,23 +40,15 @@ pip install opendr==0.77
 mkdir model
 ```
 
-Note 1: for error regarding egg_info, run:
-```
-pip install imageio==2.6.1
-pip install -r requirements.txt
-```
+Note 1: for error regarding egg_info, run `pip install imageio==2.6.1`, before re-running `pip install -r requirements.txt`.
 
-Note 2: for tensorflow-gpu==1.12.0, requires protobuf >= 3.6.1. If error regarding protobuf requiring python 3.6, run 
-```
-pip install protobuf==3.6.1
-pip install -r requirements.txt
-```
+Note 2: for tensorflow-gpu==1.12.0, requires protobuf >= 3.6.1. If error regarding protobuf requiring python 3.6, run `pip install protobuf==3.6.1` before re-running `pip install -r requirements.txt`.
 
 Install mesh processing libraries from [MPI-IS/mesh](https://github.com/MPI-IS/mesh). (This now only works with python 3, so do not install it)
 
 * Update: Please install the following [fork](https://github.com/TimoBolkart/mesh) for working with the mesh processing libraries with python 2.7. 
 
-Note 3: When running `make`, deactivate your conda environment `conda deactivate`, otherwise this will interfere with the virtual environment used in the makefile. Then reactivate your environment `conda activate ringnet` before running `make install`.
+Note 3: when running `make`, deactivate your conda environment `conda deactivate`, otherwise this will interfere with the virtual environment used in the makefile. Then reactivate your environment `conda activate ringnet` before running `make install`.
 
 ## Download models
 
