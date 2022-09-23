@@ -2,7 +2,7 @@
 
 ![alt text](https://github.com/soubhiksanyal/RingNet/blob/master/gif/celeba_reconstruction.gif?raw=true)
 
-This is an official repository of the paper Learning to Regress 3D Face Shape and Expression from an Image without 3D Supervision. The project was formerly referred by RingNet. The codebase consists of the inference code, i.e. give an face image using this code one can generate a 3D mesh of a complete head with the face region. For further details on the method please refer to the following publication,
+This is a fork of the official repository of the paper Learning to Regress 3D Face Shape and Expression from an Image without 3D Supervision. The project was formerly referred by RingNet. The codebase consists of the inference code, i.e. give an face image using this code one can generate a 3D mesh of a complete head with the face region. For further details on the method please refer to the following publication,
 
 ```
 Learning to Regress 3D Face Shape and Expression from an Image without 3D Supervision
@@ -24,6 +24,22 @@ More details on our NoW benchmark dataset, 3D face reconstruction challenge can 
 
 The code uses **Python 2.7** and it is tested on Tensorflow gpu version 1.12.0, with CUDA-9.0 and cuDNN-7.3.
 
+Create virtual environment:
+```
+git clone git@github.com:arcgt/RingNet.git
+cd RingNet
+```
+
+Install requirements:
+```
+conda create --name ringnet python=2.7
+conda activate ringnet
+pip install --upgrade pip==19.1.1
+pip install -r requirements.txt
+pip install opendr==0.77
+mkdir model
+```
+
 Note 1: for error regarding egg_info, run:
 ```
 pip install imageio==2.6.1
@@ -33,28 +49,14 @@ pip install -r requirements.txt
 Note 2: for tensorflow-gpu==1.12.0, requires protobuf >= 3.6.1. If error regarding protobuf requiring python 3.6, run 
 ```
 pip install protobuf==3.6.1
-pip install tensorflow-gpu==1.12.0
-```
-
-### Setup RingNet Virtual Environment
-
-```
-virtualenv --no-site-packages <your_home_dir>/.virtualenvs/RingNet
-source <your_home_dir>/.virtualenvs/RingNet/bin/activate
-pip install --upgrade pip==19.1.1
-```
-### Clone the project and install requirements
-
-```
-git clone https://github.com/soubhiksanyal/RingNet.git
-cd RingNet
 pip install -r requirements.txt
-pip install opendr==0.77
-mkdir model
 ```
-Install mesh processing libraries from [MPI-IS/mesh](https://github.com/MPI-IS/mesh). (This now only works with python 3, so donot install it)
 
-* Update: Please install the following [fork](https://github.com/TimoBolkart/mesh) for working with the mesh processing libraries with python 2.7. When running `make`, if using a conda environment, deactivate environment before running, then activate before running `make install`.
+Install mesh processing libraries from [MPI-IS/mesh](https://github.com/MPI-IS/mesh). (This now only works with python 3, so do not install it)
+
+* Update: Please install the following [fork](https://github.com/TimoBolkart/mesh) for working with the mesh processing libraries with python 2.7. 
+
+Note 3: When running `make`, deactivate your conda environment `conda deactivate`, otherwise this will interfere with the virtual environment used in the makefile. Then reactivate your environment `conda activate ringnet` before running `make install`.
 
 ## Download models
 
