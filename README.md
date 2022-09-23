@@ -36,7 +36,6 @@ conda create --name ringnet python=2.7
 conda activate ringnet
 pip install --upgrade pip==19.1.1
 pip install -r requirements.txt
-pip install opendr==0.77
 mkdir model
 ```
 
